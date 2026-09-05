@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@400;500&display=swap');
+
+:root { color-scheme: dark; --gold:#bd9b63; --ink:#080808; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--ink); color:#e8e3da; font-family:Montserrat, sans-serif; }
+button, a { color:inherit; }
+.site-header { height:82px; display:flex; align-items:center; justify-content:space-between; padding:0 clamp(24px, 4.5vw, 74px); border-bottom:1px solid #2b2926; }
+.wordmark { color:var(--gold); font:500 12px/1 Montserrat,sans-serif; letter-spacing:.32em; text-decoration:none; }
+.site-header nav { display:flex; align-items:center; gap:36px; }
+.site-header nav a { color:#aaa49b; font-size:9px; letter-spacing:.2em; text-decoration:none; text-transform:uppercase; }
+.menu { width:28px; height:22px; padding:3px 0; border:0; background:none; display:grid; align-content:center; gap:6px; cursor:pointer; }
+.menu span { display:block; height:1px; background:var(--gold); }
+
+.material-study { min-height:calc(100vh - 82px); padding:75px clamp(24px, 4.5vw, 74px) 70px; overflow:hidden; }
+.study-grid { width:min(100%, 1320px); margin:auto; display:grid; grid-template-columns:minmax(220px,1fr) 590px minmax(210px,1fr); gap:clamp(32px,4vw,68px); align-items:start; }
+.study-copy { padding-top:45px; }
+.eyebrow, .control-label { color:#807970; font-size:8px; letter-spacing:.25em; text-transform:uppercase; }
+.eyebrow { margin:0 0 25px; }
+h1 { margin:0; color:var(--gold); font:400 clamp(49px,4.8vw,72px)/.81 'Cormorant Garamond',serif; letter-spacing:-.045em; }
+.leather-panel { --leather:#9c5632; position:relative; width:590px; height:455px; border-radius:10px; overflow:hidden; background-color:var(--leather); background-image:linear-gradient(118deg,rgba(255,221,175,.14),transparent 38%,rgba(55,17,5,.13)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.4 .2' numOctaves='4' seed='17'/%3E%3CfeColorMatrix values='.32 0 0 0 .42 .17 0 0 0 .18 .08 0 0 0 .08 0 0 0 .34 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"); box-shadow:inset 0 0 45px rgba(40,12,4,.2); transition:background-color .35s ease; }
+.leather-panel[data-tone='ebony'] { --leather:#34251f; }
+.leather-panel[data-tone='stone'] { --leather:#756954; }
+.focus-ring { position:absolute; width:210px; height:210px; left:86px; top:78px; }
+.focus-ring circle { fill:none; stroke:rgba(197,199,197,.62); stroke-width:1; }
+.product-inset { position:absolute; right:24px; bottom:24px; width:245px; height:205px; margin:0; overflow:hidden; border-radius:5px; background:linear-gradient(145deg,#272522,#10100f); box-shadow:0 13px 25px rgba(0,0,0,.25); }
+.case { position:absolute; width:238px; height:auto; left:5px; top:19px; }
+.material-controls { padding-top:50px; }
+.control-group { margin:0; padding:0 0 24px; border:0; border-bottom:1px solid rgba(189,155,99,.46); }
+.control-group + .control-group { padding-top:24px; }
+.control-label { margin:0 0 10px; }
+.control-value { margin:0; color:#d3cdc3; font-family:'Cormorant Garamond',serif; font-size:17px; }
+.swatches { display:flex; gap:10px; }
+.swatch { width:17px; height:17px; padding:0; border:2px solid var(--ink); outline:1px solid transparent; border-radius:50%; background:var(--swatch); cursor:pointer; transition:outline-color .2s, transform .2s; }
+.swatch:hover { transform:scale(1.1); }
+.swatch.is-active { outline-color:var(--gold); }
+.colour-name { margin:12px 0 0; color:#9c958a; font:400 13px 'Cormorant Garamond',serif; }
+
+@media (max-width:1100px) {
+  .study-grid { grid-template-columns:180px minmax(430px,590px) 175px; gap:28px; }
+  .leather-panel { width:100%; }
+  h1 { font-size:54px; }
+}
+@media (max-width:850px) {
+  .material-study { padding-top:48px; }
+  .study-grid { grid-template-columns:1fr minmax(190px,.45fr); }
+  .study-copy { padding-top:0; }
+  .leather-panel { grid-column:1 / -1; grid-row:2; height:auto; aspect-ratio:590/455; }
+  .material-controls { padding-top:26px; grid-column:2; grid-row:1; }
+}
+@media (max-width:590px) {
+  .site-header nav a { display:none; }
+  .material-study { padding-inline:18px; }
+  .study-grid { display:block; }
+  .study-copy { margin-bottom:36px; }
+  .leather-panel { min-height:390px; aspect-ratio:auto; }
+  .material-controls { padding-top:42px; }
+  .product-inset { width:min(245px,calc(100% - 48px)); }
+}
