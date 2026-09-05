@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>True Luxury — Material Study</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#">TRUE LUXURY</a>
+      <nav aria-label="Main navigation">
+        <a href="#material-study">Materials</a>
+        <a href="#collection">Collection</a>
+        <button class="menu" type="button" aria-label="Open menu"><span></span><span></span></button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="material-study" id="material-study" aria-labelledby="material-title">
+        <div class="study-grid">
+          <header class="study-copy">
+            <p class="eyebrow">02 / MATERIAL STUDY</p>
+            <h1 id="material-title">The Art<br />of Fine<br />Leather<br />Craft</h1>
+          </header>
+
+          <div class="leather-panel" data-tone="cognac">
+            <svg class="focus-ring" viewBox="0 0 210 210" aria-hidden="true">
+              <circle cx="105" cy="105" r="101" />
+            </svg>
+            <figure class="product-inset">
+              <svg class="case" viewBox="0 0 270 260" role="img" aria-label="Structured leather travel case">
+                <defs>
+                  <linearGradient id="caseLeather" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#bd733f"/><stop offset=".55" stop-color="#8e4929"/><stop offset="1" stop-color="#542619"/>
+                  </linearGradient>
+                  <filter id="caseShadow"><feDropShadow dx="0" dy="7" stdDeviation="6" flood-opacity=".55"/></filter>
+                </defs>
+                <g filter="url(#caseShadow)">
+                  <path d="M86 59V40c0-22 16-32 49-32s49 10 49 32v19h-18V42c0-11-8-16-31-16s-31 5-31 16v17z" fill="none" stroke="#70351f" stroke-width="10"/>
+                  <path d="M42 61h186c15 0 25 11 27 27l15 158c2 18-9 29-25 29H25c-16 0-27-11-25-29L15 88c2-16 12-27 27-27z" fill="url(#caseLeather)" stroke="#d0915f" stroke-width="2"/>
+                  <path d="M18 105h234M62 62v211M208 62v211" fill="none" stroke="#632e1d" stroke-width="5" opacity=".75"/>
+                  <path d="M54 64v209M216 64v209" fill="none" stroke="#dc9a68" stroke-width="1" opacity=".7"/>
+                  <rect x="111" y="94" width="48" height="32" rx="3" fill="#a37340" stroke="#e2bf7c" stroke-width="2"/>
+                </g>
+              </svg>
+            </figure>
+          </div>
+
+          <aside class="material-controls" aria-label="Material options">
+            <div class="control-group">
+              <p class="control-label">Leather</p>
+              <p class="control-value" aria-live="polite">Full-Grain Calfskin</p>
+            </div>
+            <div class="control-group">
+              <p class="control-label">Origin</p>
+              <p class="control-value">Tuscany, Italy</p>
+            </div>
+            <fieldset class="control-group colour-picker">
+              <legend class="control-label">Colour</legend>
+              <div class="swatches">
+                <button class="swatch is-active" style="--swatch:#a25b34" data-tone="cognac" data-label="Cognac" aria-label="Cognac" aria-pressed="true"></button>
+                <button class="swatch" style="--swatch:#342824" data-tone="ebony" data-label="Ebony" aria-label="Ebony" aria-pressed="false"></button>
+                <button class="swatch" style="--swatch:#6e6250" data-tone="stone" data-label="Stone" aria-label="Stone" aria-pressed="false"></button>
+              </div>
+              <p class="colour-name">Cognac</p>
+            </fieldset>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
